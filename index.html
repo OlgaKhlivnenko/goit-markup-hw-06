@@ -18,7 +18,9 @@
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="btn-close" data-modal-close>
-                    <img src="./images/btn-close.png" alt="x">
+                    <svg  width="11px" height="11px">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
                 </button>
                 <form class="form">
                     <div class="form-field">
@@ -27,15 +29,29 @@
                     <div class="form-field">
                         <label for="name" class="form-label">Имя</label>
                         <input type="text" name="name" id="name" class="form-input">
-                            
+                        
+                            <svg class="form-icon" width="18px" height="18px">
+                                <use href="./images/icons.svg#icon-name"></use>
+                            </svg>
+                        
                     </div>
                     <div class="form-field">
                         <label for="telephone" class="form-label">Телефон</label>
                         <input type="tel" name="telephone" id="telephone" class="form-input">
+                        
+                            <svg class="form-icon" width="18px" height="18px">
+                                <use href="./images/icons.svg#icon-phone"></use>
+                            </svg>
+                        
                     </div>
                     <div class="form-field">
                         <label for="mail" class="form-label">Почта</label>
                         <input type="email" name="mail" id="mail" class="form-input"> 
+                        
+                            <svg class="form-icon" width="18px" height="18px">
+                                <use href="./images/icons.svg#icon-mail"></use>
+                            </svg>
+                        
                     </div>
                     <div class="form-field">
                         <label for="feedback" class="form-label">Комментарий</label>
@@ -414,6 +430,20 @@
                         </li>
                     </ul>
                 </div>
+                <div class="subscribe">
+                    <p class="join-title">Подпишитесь на рассылку</p>
+                    <div class="form-sub">
+                        <label>
+                            <input type="email" name="subscribe" id="name" placeholder="E-mail" class="form-sing">
+                        </label>
+                        <button class="form-btn sub-btn" type="submit">
+                            Подписаться
+                            <svg class="join-item" width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-sub"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div> 
            </div>
         </div>
         
