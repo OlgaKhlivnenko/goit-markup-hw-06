@@ -625,6 +625,8 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   background-color: var(--primary-white-color);
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close:hover {
   fill: var(--accent-color);
@@ -632,6 +634,7 @@ body {
 .form {
   width: 448px;
   margin: 40px auto 40px auto;
+  background: #ffffff;
 }
 .form-title {
   width: 448px;
@@ -656,22 +659,32 @@ body {
 }
 .form-input {
   height: 40px;
+  padding-left: 40px;
   margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
+  transition: boder-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment {
+  outline: none;
+  cursor: pointer;
 }
 .form-icon {
   position: absolute;
   display: inline-block;
   top: 55%;
   left: 15px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focus ~ .form-icon {
+.form-field:focus-within .form-icon {
   fill: var(--accent-color);
 }
-.form-field:focus ~ .form-input {
-  border: 1px solid var(--accent-color);
+.form-field:focus-within .form-input {
+  border-color: var(--accent-color);
+  background-color: var(--primary-white-color);
 }
 .form-field textarea {
   height: 120px;
@@ -707,10 +720,40 @@ body {
   line-height: 1.166;
   color: rgba(117, 117, 117, 0.5);
 }
+
 .agree {
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 16px;
   font-size: 14px;
   line-height: 1.714;
   margin-bottom: 30px;
+}
+.check-icon {
+  display: inline-block;
+  margin-right: 9px;
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--title-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.checkbox:checked + .check-icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  border-color: var(--accent-color);
+  background-origin: border-box;
 }
 .agree-link {
   color: var(--accent-color);

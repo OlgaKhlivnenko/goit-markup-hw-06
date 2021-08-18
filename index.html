@@ -29,11 +29,9 @@
                     <div class="form-field">
                         <label for="name" class="form-label">Имя</label>
                         <input type="text" name="name" id="name" class="form-input">
-                        
-                            <svg class="form-icon" width="18px" height="18px">
+                             <svg class="form-icon" width="18px" height="18px">
                                 <use href="./images/icons.svg#icon-name"></use>
-                            </svg>
-                        
+                            </svg>    
                     </div>
                     <div class="form-field">
                         <label for="telephone" class="form-label">Телефон</label>
@@ -47,19 +45,20 @@
                     <div class="form-field">
                         <label for="mail" class="form-label">Почта</label>
                         <input type="email" name="mail" id="mail" class="form-input"> 
-                        
                             <svg class="form-icon" width="18px" height="18px">
                                 <use href="./images/icons.svg#icon-mail"></use>
                             </svg>
-                        
                     </div>
                     <div class="form-field">
                         <label for="feedback" class="form-label">Комментарий</label>
-                        <textarea name="feedback" id="feedback" placeholder="Введите текст" class="form-input"></textarea>    
+                        <textarea name="feedback" id="feedback" placeholder="Введите текст" class="form-comment"></textarea>    
                     </div>
                     <div class="form-field">
-                        <input type="checkbox" value="agree" id="agree" name="agree">
-                        <label for="agree" class="agree">Соглашаюсь с рассылкой и принимаю 
+                        
+                        <label class="agree">
+                            <input type="checkbox" value="agree" class="checkbox">
+                            <span class="check-icon"></span>
+                            Соглашаюсь с рассылкой и принимаю 
                             <a href="" class="agree-link">Условия договора</a>
                         </label>
                     </div>
